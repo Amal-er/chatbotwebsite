@@ -1,0 +1,533 @@
+/* Home Section */
+body {
+  font-family: "Andada Pro", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Andada Pro", serif !important;
+}
+
+.home-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000000;
+  background-image: url('./assets/images/handbg.jpg');
+  /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+/* Dark Overlay for Background */
+.overlay-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Darker overlay */
+  z-index: 0;
+  /* Ensure the overlay is below the content */
+}
+
+/* Container Content Above Overlay */
+.home-section>.container {
+  position: relative;
+  z-index: 1;
+  /* Ensure content is above the overlay------------ */
+}
+
+/* Text Section Styling */
+.text-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  /* font-family: "Plus Jakarta Sans", sans-serif; */
+  z-index: 2;
+  /* Ensure text is above overlay */
+}
+
+.text-white {
+  color: #fff !important;
+  /* Ensuring full white color for all text */
+}
+
+.text-white1 {
+  color: #fff !important;
+  /* Ensuring full white color for all text */
+  font-size: 60px;
+}
+
+.highlight-text {
+  color: #b74dfd;
+  /* Purple highlight color ------------*/
+  /* text-decoration: underline; */
+
+
+}
+
+.highlight-text1 {
+  color: #b74dfd;
+  /* Purple highlight color */
+  text-decoration: underline;
+  text-decoration-color: #3f149f;
+  /* Change underline color to red */
+  /* font-family: "Plus Jakarta Sans", sans-serif; */
+  font-size: 60px;
+}
+
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  z-index: 2;
+  /* Ensure feature list is above overlay ------------*/
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  z-index: 2;
+  /* Ensure list items are above overlay -------------*/
+}
+
+/* Chat Interface */
+.chat-interface {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  /* Ensure chat interface is above overlay */
+}
+
+/* Robot Image */
+.robot-image {
+  max-width: 300px;
+  z-index: 2;
+  /* Ensure robot image is above overlay */
+}
+
+/* Dotsquare Image */
+/* .dotsquare {
+  width: 200px;
+  top: -10px;
+  right: 250px;
+
+  position: absolute;
+  z-index: 2; 
+} */
+
+@keyframes moveDotsquare {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+    /* Move slightly to the right */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Return to original position */
+  }
+}
+
+/* Dotsquare Styling */
+.dotsquare {
+  width: 200px;
+  top: -10px;
+  right: 250px;
+  position: absolute;
+  z-index: 2;
+  /* Ensure dotsquare is above overlay */
+  animation: moveDotsquare 2s ease-in-out infinite;
+  /* Apply the animation */
+}
+
+
+.chat-interface img {
+  width: 100%;
+}
+
+
+.rotating-ring {
+  animation: rotateY 3s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+/* -------------------------- */
+/* Feature Section Styling */
+.feature-section {
+  background-color: #060818;
+  /* Dark background */
+  /* padding: 40px 0; */
+
+
+}
+
+.feature-box {
+  text-align: center;
+
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  /* width: 30px; */
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  gap: 3;
+  width: 200px;
+  background-color: #0e1726;
+}
+
+.feature-icon {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 1.5rem;
+  color: white;
+  /* Initial color for titles */
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */
+}
+
+/* Change h3 color to red on hover only when the h3 itself is hovered */
+.feature-box h3:hover {
+  color: #cf6679;
+  /* Change title color to red on hover */
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.firstbox {
+  background-color: linear-gradient(135deg, #16c5e1, #0f9ec8);
+}
+
+.features {
+  background: linear-gradient(90deg, #7436ca, #b74dfd);
+  /* Initial gradient */
+  color: white;
+
+}
+
+.custom-button {
+  border-radius: 50px;
+  /* Change this value to your desired radius */
+  background-color: #3f149f !important;
+  /* Override Bootstrap styles */
+  padding: 10px 30px;
+  /* Optional: Adjust padding to maintain button size */
+  border: 0;
+
+}
+
+
+
+.feature-box.hover-effect:hover {
+  background: linear-gradient(90deg, #7436ca, #b74dfd);
+}
+
+
+/* ---------- */
+.video-container-fluid {
+  background-color: #060818;
+  width: 100%;
+  /* Use 100% for full width */
+  height: auto;
+  /* Auto height to maintain aspect ratio */
+  overflow: hidden;
+  /* Hide overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Center the video vertically if needed */
+}
+
+.video-player {
+  width: 100%;
+  /* Full width */
+  max-height: 300px;
+  /* Set a max height for mobile */
+  height: auto;
+  /* Maintain aspect ratio */
+  padding: 20px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .video-player {
+    width: 800px;
+    max-height: 500px;
+    /* Increase max height for larger screens */
+  }
+}
+
+
+/* ----------------------- */
+
+.problem {
+  /* height: 700px; */
+  padding: 10px;
+  background-color: #060818;
+}
+
+.chat-bot-interface {
+  /* width: 300px; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.chatgif{
+  width: 300px;
+}
+
+
+
+.robot-container {
+  width: 300px;
+
+}
+
+/* ----------------- */
+.icon {
+  width: 25px;
+}
+
+/* -------------- */
+@keyframes small-movement {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.robot-container {
+  animation: small-movement 2s ease-in-out infinite;
+  /* Adjust duration and timing as needed */
+}
+
+/* ----------------------------- */
+.handmain {
+  width: 600px;
+}
+
+.hand1 {
+  width: 100%;
+}
+
+/* Ensure that hand1 stays relative and others are positioned as absolute */
+.handmain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hand1 {
+  position: relative;
+  /* This keeps it in its natural position */
+  z-index: 1;
+  /* Ensures it stays behind the chat messages */
+}
+
+.chatbot {
+  position: absolute;
+  top: 1%;
+  width: 200px;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeIn 0.8s ease-in;
+  z-index: 2;
+
+}
+
+.message {
+  position: absolute;
+  width: 200px;
+  /* Adjust based on design */
+  animation: slideIn 0.8s ease-in-out;
+  z-index: 3;
+  top: 30%;
+  left: 50%;
+}
+
+/* Positioning the chat messages */
+.message-left {
+  left: 10%;
+  top: 5%;
+  width: 500px;
+}
+
+.message-right {
+  /* right: 100%; */
+  top: 0%;
+  left: 40%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media queries to adjust for responsiveness
+@media (max-width: 768px) {
+
+  .message-left,
+  .message-right {
+    left: 10%;
+    right: 5%;
+  }
+
+  .message {
+    width: 150px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .chatbot {
+    max-width: 150px;
+    width: 150px;
+  }
+  .message-left, .message-right {
+    max-width: 120px;
+  }
+}
+ */
+
+
+ /* Styles for mobile devices */
+@media (max-width: 768px) {
+  .message-left,
+  .message-right {
+    left: 4%;  /* Ensure positioning is flexible */
+    right: 5%;
+    top: 1%;
+  }
+
+  .message {
+    width: 80px;
+  }
+
+  .chatbot {
+    max-width: 100px;  /* Smaller chatbot size for mobile */
+    width: 100px;
+    left: 150px;
+  }
+}
+
+/* Styles for tablets and larger devices */
+@media (min-width: 768px) {
+  .chatbot {
+    max-width: 150px;
+    width: 150px;
+  }
+
+  .message-left, 
+  .message-right {
+    max-width: 120px;
+    left: 0%;
+    right: 1%; /* Fixed width for desktop messages */
+  }
+
+  .message {
+    width: 100px; /* Fixed width for desktop messages */
+  }
+}
+
+/* -------------------------testimonial------------------------------- */
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place video behind content */
+  overflow: hidden;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 1;
+/* Full-screen height */
+}
+
+
+.bg-purple {
+  background-color: #6c63ff; /* Adjust as per design */
+}
+.object-cover {
+  object-fit: cover;
+}
+
+.query {
+  background: linear-gradient(135deg, #50249c, #8364d8);
+}
+
+.submit{
+  background-color: #3f149f;
+  padding: 5px;
+  border-radius: 10px;
+}
+.submit:hover {
+  background: #cf6679;
+  transform: scale(1.05);
+  cursor: pointer; /* Changes the cursor to pointer on hover */
+}
